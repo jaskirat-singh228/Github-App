@@ -1,4 +1,4 @@
-import { useNavigation, useTheme } from '@react-navigation/native';
+import { CommonActions, useNavigation, useTheme } from '@react-navigation/native';
 import { useEffect, useRef } from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import * as Animatable from 'react-native-animatable';
@@ -19,7 +19,12 @@ const SplashScreen = () => {
     useEffect(() => {
         if (logoRef.current) {
             logoRef.current.animate('zoomIn', 1500).then(() => {
-                navigation.navigate('RepositoryListScreen');
+                navigation.dispatch(
+                    CommonActions.reset({
+                        index: 0,
+                        routes: [{ name: 'RepositoryListScreen' }],
+                    })
+                );
             });
         }
     }, [navigation]);
