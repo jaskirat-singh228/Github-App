@@ -1,0 +1,11 @@
+export const logo = require('../assets/github.png');
+export const sun = require('../assets/sun.png');
+export const moon = require('../assets/moon.png');
+export const search = require('../assets/search.png');
+export const clear = require('../assets/clear.png');
+export const star = require('../assets/star.png');
+export const unfilledHeart = require('../assets/unfilledHeart.png');
+export const filledHeart = require('../assets/filledHeart.png');
+export const forks = require('../assets/forks.png');
+export const language = require('../assets/language.png');
+export const back = require('../assets/back.png');
